@@ -1,4 +1,4 @@
-package com.company.operations.entities;
+package com.company.operations.validators;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -10,6 +10,8 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidNumbers {
     String message() default "Invalid numbers";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }

@@ -1,4 +1,4 @@
-package com.company.operations.entities;
+package com.company.operations.validators;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -11,6 +11,21 @@ public class NumbersValidator implements ConstraintValidator<ValidNumbers, List<
 
     @Override
     public boolean isValid(List<String> numbers, ConstraintValidatorContext context) {
+
+        if (numbers == null) {
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("Numbers are missing")
+                    .addConstraintViolation();
+            return false;
+        }
+
+        if (numbers.isEmpty()) {
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("Numbers list cannot be empty")
+                    .addConstraintViolation();
+            return false;
+        }
+
         for (String number : numbers) {
             if (!number.matches("[0-9]+")) {
                 return false;
