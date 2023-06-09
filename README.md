@@ -20,9 +20,13 @@ The DTO fields in the requests are validated using custom annotations: `ValidNum
 ## Future Enhancements
 The application is designed with scalability in mind. We have implemented an OperationFactory that can be easily extended to support new types of operations. In the future, we could add more operations such as Decimal, Binary, HEX Addition, Subtraction, Multiplication, and Division.
 
-UML Diagram
-
 ## Usage
+To build the application, use the following command:
+`mvn clean install`
+
+To run the application, use the following command:
+`mvn spring-boot:run`
+
 A sample curl command to invoke the operation execution endpoint is:
 Currently there is just one implementation of operations which is decimal_addition and it only accepts
 large non-negative numbers
