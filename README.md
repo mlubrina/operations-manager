@@ -20,6 +20,11 @@ The DTO fields in the requests are validated using custom annotations: `ValidNum
 ## Future Enhancements
 The application is designed with scalability in mind. We have implemented an OperationFactory that can be easily extended to support new types of operations. In the future, we could add more operations such as Decimal, Binary, HEX Addition, Subtraction, Multiplication, and Division.
 
+## Requirements
+Before running the application, make sure you have the following requirements installed and configured:
+- Java Development Kit (JDK): Version 11 or higher.
+- Apache Maven: Version 3.6.0 or higher.
+
 ## Usage
 To build the application, use the following command:
 `mvn clean install`
